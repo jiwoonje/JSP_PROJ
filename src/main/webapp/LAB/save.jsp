@@ -16,9 +16,10 @@
 	// 파라미터로 넘어온 값은 모두 String
 	
 	String na = request.getParameter("name");
-	String em = request.getParameter("email");
-	String sub = request.getParameter("subject");
-	String cont = request.getParameter("content");
+	String age = request.getParameter("age");
+	String wei = request.getParameter("weight");
+	String addr = request.getParameter("addr");
+	String phone = request.getParameter("phone");
 
 %>
 
@@ -26,13 +27,13 @@
 <%@ include file ="../db_conn/db_conn_oracle.jsp" %>
 
 <!-- Statement 객체를 사용해서 DB에 저장함 -->
-<% 
-	// client 에서 받은 값을 DB에 저장함
+<%
+	//client 에서 받은 값을 DB에 저장함
 	String sql = null;			// sql <== SQL 쿼리를 저장하는 변수
 	Statement stmt = null;		// stmt <== SQL 쿼리를 담아서 DB에 적용하는 객체
 	
-	sql = "insert into guestboard (name, email, subject, content)";
-	sql = sql + " values('" + na + "', '" + em + "', '" + sub + "', '" + cont + "')" ;
+	sql = "insert into mem (name, age, weight, addr, phone)";
+	sql = sql + " values('" + na + "', '" + age + "', '" + wei + "', '" + addr + "', '" + phone + "')" ;
 	
 	out.println (sql);
 	
@@ -52,8 +53,7 @@
 	}
 	
 	
- %>
-
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,9 +65,10 @@
 	<!-- 변수에 담긴 값을 출력 -->
 	<h2> 넘어오는 변수 값 출력 </h2>
 	<%= na %><br>
-	<%= em %><br>
-	<%= sub %><br>
-	<%= cont %><br>
+	<%= age %><br>
+	<%= wei %><br>
+	<%= addr %><br>
+	<%= phone %><br>
 	<h1> Statement </h1>
 </body>
 </html>
