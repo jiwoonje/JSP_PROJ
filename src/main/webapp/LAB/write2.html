@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<script language="javascript">
+		function check(){
+			// alert ("함수 호출 성공");
+			with (document.myform){
+				if (name.value.length == 0){
+				alert ("이름을 입력해 주세요");
+				name.focus();
+				return false;
+				}
+				if (email.value.length == 0){
+				alert ("이메일을 입력해 주세요");
+				email.focus();
+				return false;
+				}
+				if (subject.value.length == 0){
+				alert ("제목을 입력해 주세요");
+				subject.focus();
+				return false;
+				}
+				if (content.value.length == 0){
+				alert ("내용을 입력해 주세요");
+				content.focus();
+				return false;
+				}
+				
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	<h2> Form 내의 input에서 값이 없을 경우 유효성 체크 (JavaScript) </h2>
+	<form name="myform" method="post" action="#">
+		이름 : <input type="text" name="name"><br>
+		메일 : <input type="text" name="email"><br>
+		제목 : <input type="text" name="subject" size="48"><br>
+		내용 : <textarea rows="30" cols="100" name="content"></textarea><br>
+		
+		<a herf="#" onClick="check();">
+			<img src="./image/ok.gif" width="100px"><br>
+		</a>
+		<img src="./image/cancle.gif" width="100px"><br>
+		
+		
+	</form>
+</body>
+</html>

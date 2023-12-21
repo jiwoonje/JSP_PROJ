@@ -8,10 +8,10 @@
 <%
 	// DB에서 가져온 레코드셋을 rs에 담은 후 ArrayList에 저장 후 출력
 	
-	ArrayList name = new ArrayList();
-	ArrayList email = new ArrayList();
-	ArrayList subject = new ArrayList();
-	ArrayList content = new ArrayList();
+	ArrayList<String> name = new ArrayList<>();
+	ArrayList<String> email = new ArrayList<>();
+	ArrayList<String> subject = new ArrayList<>();
+	ArrayList<String> content = new ArrayList<>();
 	
 	// 객체 변수 선언
 	String sql = null ;
